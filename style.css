@@ -1,0 +1,27 @@
+    .cruds .row input {
+        padding-block: 10px;
+        margin: 10px 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #ddd;
+        text-indent: 20px;
+        outline: none;
+        transition: 1s;
+    }
+    
+    .cruds .row input:focus {
+        border: solid 1px black;
+    }
+    
+    .cruds .row span {
+        background-color: red;
+        padding: 10px;
+        height: 20px;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .cruds .row button#danger {
+        display: none;
+    }

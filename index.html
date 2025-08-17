@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Mangamnt Ecommerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cruds">
+        <div class="row m-2 text-center">
+            <div class="col-md-12">
+                <h4>CRUDS</h4>
+                <h4>PRODUCT MANAGEMENT SYSTEM</h4>
+            </div>
+        </div>
+        <div class="row m-2 align-items-center">
+            <div class="col-md-12">
+                <input type="text" class="w-100" placeholder="Title" id="title">
+            </div>
+        </div>
+        <div class="row m-2 text-center">
+            <div class="col-md-3">
+                <input type="text" onkeyup="getInformation()" class="w-100" placeholder="Price" id="price">
+            </div>
+            <div class="col-md-3">
+                <input type="number" onkeyup="getInformation()" class="w-100" placeholder="Taxes" id="taxes">
+            </div>
+            <div class="col-md-2">
+                <input type="number" onkeyup="getInformation()" class="w-100" placeholder="Ads" id="ads">
+            </div>
+            <div class="col-md-2">
+                <input type="text" onkeyup="getInformation()" class="w-100" placeholder="Discount" id="discount">
+            </div>
+            <div class="col-md-2">
+                <input type="text" onkeyup="getInformation()" class="w-100" placeholder="Total" id="total" readonly>
+            </div>
+        </div>
+
+        <div class="row m-2 align-items-center">
+            <div class="col-md-12">
+                <input type="text" class="w-100" placeholder="Count" id="count">
+            </div>
+        </div>
+        <div class="row m-2 align-items-center">
+            <div class="col-md-12">
+                <input type="text" class="w-100" placeholder="Category" id="category">
+            </div>
+        </div>
+        <div class="row m-2 align-items-center">
+            <div class="col-md-12">
+                <button class="btn btn-primary w-100 ms-2" id="send">Create</button>
+            </div>
+        </div>
+        <div class="row m-2 align-items-center">
+            <div class="col-md-12">
+                <input type="text" class="w-100" onkeyup="searchdata(this.value)" placeholder="Search" id="search">
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-md-6 col-lg-6">
+                <input type="button" id="serone" class="bg-primary text-light w-100 " value="Search By Title" onclick="gettitleid(this.id)" placeholder="Search By Title">
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <input type="button" value="Search By Category" class="bg-primary text-light w-100 " id="sertwo" onclick="gettitleid(this.id)" placeholder="Search By Category">
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-md-12">
+                <button class="btn btn-danger w-100 rounded " id="danger">Delete All</button>
+            </div>
+        </div>
+        <div class="row m-2 align-items-center">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Taxes</th>
+                            <th>Ads</th>
+                            <th>Discount</th>
+                            <th>Count</th>
+                            <th>Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center" id="tbody">
+                        <!-- الصفوف سيتم إضافتها هنا ديناميكيًا -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="main.js">
+    </script>
+
+</body>
+
+</html>
